@@ -94,10 +94,14 @@ class AralanaaaPost extends StatelessWidget {
               ],
             ),
             SizedBox(height: kHorizontalPadding * 0.5),
-            Container(
-                child: SingleChildScrollView(child: Text(post.description))),
+            Expanded(
+              flex: 1,
+              child: Container(
+                  child: SingleChildScrollView(child: Text(post.description))),
+            ),
             SizedBox(height: kHorizontalPadding * 0.5),
             Expanded(
+              flex: 9,
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -166,7 +170,7 @@ class AralanaaaPost extends StatelessWidget {
               Spacer(),
               Container(
                 child: Text(
-                  'Martin y 50 personas',
+                  '${post.commentName} y 50 personas',
                   style: TextStyle(fontSize: 10),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
@@ -217,9 +221,7 @@ class AralanaaaPost extends StatelessWidget {
             SizedBox(height: kHorizontalPadding * 0.5),
             Row(
               children: [
-                CircleAvatar(
-                    backgroundImage:
-                        AssetImage('assets/icons/imagenMartin.png')),
+                CircleAvatar(backgroundImage: AssetImage(post.commentImage)),
                 SizedBox(width: kHorizontalPadding),
                 Expanded(
                     child: Column(
@@ -227,11 +229,11 @@ class AralanaaaPost extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      post.name,
+                      post.commentName,
                       style: Theme.of(context).textTheme.bodyText1,
                     ),
                     Text(
-                      post.date,
+                      post.comment,
                       style: Theme.of(context).textTheme.bodyText2,
                     ),
                   ],

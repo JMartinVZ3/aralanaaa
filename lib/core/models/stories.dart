@@ -6,13 +6,13 @@ class Story {
 
 List demoStories = [
   Story(
-    image: "assets/images/imagen1.jpeg",
+    image: "assets/images/imagen9.jpeg",
   ),
   Story(
     image: "assets/images/imagen2.jpeg",
   ),
   Story(
-    image: "assets/images/imagen3.jpeg",
+    image: "assets/images/imagen10.jpeg",
   ),
   Story(
     image: "assets/images/imagen4.jpeg",
